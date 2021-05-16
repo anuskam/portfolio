@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <principal></principal>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  padding: 0;
+  margin: 0;
+  cursor:url('../src/assets/media/img/meow_witch.png'), auto;
 }
+/* width */
+::-webkit-scrollbar {
+  max-width: 10px;
+  background-color: #372D3B;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #D9A129; 
+  border-radius: 10px;
+}
+
+
+/* Cambia de color al estar encima */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+} */
+
+
+
+/*COLOR DENTRO DE LA TRÍADA #D9A129*/
+/*COLOR DE LA PÁGINA #d94362*/
 </style>
