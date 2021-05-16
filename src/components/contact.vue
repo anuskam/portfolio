@@ -1,7 +1,7 @@
 <template>
   <div class="contacto" id="contacto">
     <div class="cabecera">
-      <img src="../assets/media/img/meow-contact.png">
+      <img src="../assets/media/img/meow_contact.png">
       <h1>Contacto</h1>
     </div>
     
@@ -91,7 +91,7 @@ export default {
 h1{
   display: inline;
   font-size: 50px;
-  margin-left: 2%;
+  margin-left: 1%;
   color: white;
   /* font-family: 'Raleway', sans-serif; */
   font-family: 'Yellowtail', cursive;

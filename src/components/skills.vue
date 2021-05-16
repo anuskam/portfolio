@@ -1,6 +1,10 @@
 <template>
   <div class="skills" id="habilidades">
-    <h1>Habilidades</h1>
+    <div class="cabecera">
+      <img src="../assets/media/img/meow_business.png">
+      <h1>Habilidades</h1>
+    </div>
+    <!-- <h1>Habilidades</h1> -->
     
   </div>
 
@@ -72,13 +76,35 @@ export default {
   border: 1px solid black;
 }
 
-h1{
+/* h1{
   font-size: 50px;
   background-color: #372D3B;
   margin-top: 11vh;
   text-align: center;
   color: white;
+  font-family: 'Yellowtail', cursive;
+} */
+
+.cabecera img {
+  display: inline;
+  width: 50px;
+  margin-bottom: 30px;
+}
+
+.cabecera {
+  white-space: nowrap;
+  margin-top: 11vh;
+  /* align-items: center; */
+  text-align: center;
+}
+
+h1{
+  display: inline;
+  font-size: 50px;
+  margin-left: 1%;
+  color: white;
   /* font-family: 'Raleway', sans-serif; */
   font-family: 'Yellowtail', cursive;
 }
+
 </style>
