@@ -35,28 +35,28 @@ export default {
         {
           id: 1,
           media: 'Github',
-          img: require('../assets/media/img/icon-github.png'),
+          img: require('../assets/media/img/icon-github.svg'),
           name: 'https://github.com/anuskam',
           link: 'https://github.com/anuskam'
         },
         {
           id: 2,
           media: 'LinkedIn',
-          img: require('../assets/media/img/icon-linkedin.png'),
+          img: require('../assets/media/img/icon-linkedin.svg'),
           name: 'https://www.linkedin.com/in/annamoreta/',
           link: 'https://www.linkedin.com/in/annamoreta/'
         },
         {
           id: 3,
           media: 'Correo electrónico',
-          img: require('../assets/media/img/icon-correo.png'),
+          img: require('../assets/media/img/icon-mail.svg'),
           name: 'anna.moreta7@gmail.com',
           link: 'mailto:anna.moreta7@gmail.com'
         },
         {
           id: 4,
           media: 'Twitter',
-          img: require('../assets/media/img/icon-twitter.png'),
+          img: require('../assets/media/img/icon-twitter.svg'),
           name: 'https://twitter.com/anuskam15',
           link: 'https://twitter.com/anuskam15'
         },
