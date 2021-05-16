@@ -49,13 +49,32 @@
 }
 
 
-@media (min-width: 200px) and (max-width: 1280px) {
+@media (min-width: 800px) and (max-width: 1280px) {
   .forest {
-    background-size: 1200px 450px;
+    background-size: 1400px 600px;
     /* overflow: hidden; */
   }
   
 }
+
+@media (max-width: 800px) {
+
+  .forest {
+    background-size: 1200px 420px;
+    top: 50%;
+    /* overflow: hidden; */
+  }
+}
+
+@media (max-width: 320px) {
+
+  .forest {
+    background-size: 1200px 420px;
+    top: 30%;
+    /* overflow: hidden; */
+  }
+}
+
 
 
 </style>
