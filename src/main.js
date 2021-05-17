@@ -7,7 +7,7 @@ Vue.use(BootstrapVue)
 
 import VueSmoothScroll from 'vue2-smooth-scroll'
 Vue.use(VueSmoothScroll, {
-  duration: 200,
+  duration: 500,
   updateHistory : false, 
 })
 
