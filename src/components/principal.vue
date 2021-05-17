@@ -66,6 +66,15 @@
   }
 }
 
+@media (max-width: 400px) {
+
+  .forest {
+    background-size: 1200px 420px;
+    top: 55%;
+    /* overflow: hidden; */
+  }
+}
+
 @media (max-width: 320px) {
 
   .forest {

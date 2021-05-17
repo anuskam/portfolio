@@ -48,7 +48,11 @@
 
 </template>
 
+
 <script>
+import $ from 'jquery';
+
+
 export default {
   data(){
     return {
@@ -126,7 +130,7 @@ export default {
       this.titulo = item.title;
       this.descripcion = item.desc;
       this.num = item.id;
-      // $("#modalInfo").modal('show');
+      $("#modalInfo").modal('show');
     }
   }
   

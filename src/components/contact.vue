@@ -7,7 +7,7 @@
     
     <div class="parentGrid">
       <div class="contact-text">
-        Si quieres contactar conmigo para saber más de mis trabajos, hacer alguna sujerencia
+        Si quieres contactar conmigo para saber más de mis trabajos, hacer alguna sugerencia
         o hablar, puedes encontrarme en las siguientes redes sociales.
       </div>
 
