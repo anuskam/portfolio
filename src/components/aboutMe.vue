@@ -45,7 +45,7 @@ export default {
 
 .cabecera {
   white-space: nowrap;
-  margin-top: 11vh;
+  margin-top: 6vh;
   /* align-items: center; */
   text-align: center;
 }
