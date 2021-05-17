@@ -8,8 +8,9 @@
     <div class="cards">
       <div class="card-list">
         <div class="card" v-for="project in projects" :key="project.id">
-          <img :src="project.img" class="card-img-top" alt="" height="250px">
-      
+          <!-- <a style="display: block;" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+            <img :src="project.img" class="card-img-top" alt="" height="250px" @click="abrirModalInfo(project)">
+          <!-- </a> -->
           <div class="card-footer">
             <small class="text-muted">{{ project.title }}</small>
           </div>
@@ -28,24 +29,31 @@
         </div> -->
 
     <!-- MODAL INFO PROYECTOS -->
-    <div class="modal fade" id="modalInfo" tabindex="-1" aria-labelledby="modalInfo" aria-hidden="true">
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="Modal con información complementaria" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">{{ titulo }}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="exampleModalLabel">{{ project.title }}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <div class="modal-body">
-            {{ descripcion }}
+            <video width="700" controls :src="project.video"></video>
+            
+            <!-- <div class="tecnologias">
+              <img v-if="project.technologies.includes('html')" src="../assets/media/img/tech-html.svg">
+              <img v-if="project.technologies.includes('javascipt')" src="../assets/media/img/tech-javascript.svg">
+              <img v-if="project.technologies.includes('laravel')" src="../assets/media/img/tech-laravel.svg">
+            </div> -->
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </template>
 
 
@@ -59,79 +67,51 @@ export default {
       titulo: "", 
       descripcion: "",
       num: 0,
-      
+      project: {},
+      video: require('../assets/media/video/project1.mp4'),
       projects: [
       {
         id: 1,
         title: "Recomerçem",
         desc: "‘Recomerçem’ es un proyecto que pretende potenciar las compras en comercios locales en Barcelona. Para ello hemos creado cuatro juegos, mediante los que se pueden acumular puntos para acceder a promociones y descuentos en diferentes tiendas. ¿Te apuntas? ¡Sigue hacia abajo para conocer a Teresa y descubrir su historia!",
-        technologies: "HTML, CSS, Javascript, Bootstrap, PHP",
+        technologies: ["html", "css", "javascript", "bootstrap", "php"],
         img: require('../assets/media/img/proyecto1.png'),    
+        video: require('../assets/media/video/project1.mp4'),
       },
       {
         id: 2,
-        title: "Mi pequeña librería",
+        title: "Mi pequeña biblioteca",
         desc: "Description of my card component2",
-        technologies: "Angular, Bootstrap",
+        technologies: ["angular", "bootstrap"],
         img: require('../assets/media/img/miniBiblioAngular.png'), 
+        video: require('../assets/media/video/mipequenabiblio.mp4'),
       },
       {
         id: 3,
         title: "Broggi",
         desc: "Description of my card component2",
-        technologies: "HTML, CSS, Vue, Laravel, Bootstrap",
+        technologies: ["html", "css", "vue", "laravel", "bootstrap"],
         img: require('../assets/media/img/proyecto2.png'), 
+        video: '<source src="../assets/media/video/project1.mp4" type="video/mp4">'
       },
       {
         id: 4,
         title: "Game",
         desc: "Description of my card component2",
-        technologies: "HTML, CSS, Javascript",
-        img: require('../assets/media/img/game.png'), 
-      },
-      {
-        id: 5,
-        title: "Card title with script component2",
-        desc: "Description of my card component2",
-        technologies: "HTML, CSS, Javascript",
-        img: require('../assets/media/img/game.png'), 
-      },
-      {
-        id: 6,
-        title: "Card title with script component2",
-        desc: "Description of my card component2",
-        technologies: "HTML, CSS, Javascript",
-        img: require('../assets/media/img/game.png'), 
-      },
-      {
-        id: 7,
-        title: "Card title with script component2",
-        desc: "Description of my card component2",
-        technologies: "HTML, CSS, Javascript",
-        img: require('../assets/media/img/game.png'), 
-      },
-      {
-        id: 8,
-        title: "Card title with script component2",
-        desc: "Description of my card component2",
-        technologies: "HTML, CSS, Javascript",
-        img: require('../assets/media/img/game.png'), 
-      },
-      
-
-
-      
-      
-    ]
+        technologies: ["html", "css", "javascript"],
+        img: require('../assets/media/img/proyecto2.png'),
+        video: '<source src="../assets/media/video/project1.mp4" type="video/mp4">'
+      },      
+      ]
     }
   }, 
   methods: {
-    itemClicked: function(item){
-      this.titulo = item.title;
-      this.descripcion = item.desc;
-      this.num = item.id;
-      $("#modalInfo").modal('show');
-    }
+    abrirModalInfo(project) {
+      this.project = project;    
+
+      $('#infoModal').modal('show');
+    }, 
+
   }
   
 }
