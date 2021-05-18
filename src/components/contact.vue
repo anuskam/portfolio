@@ -7,18 +7,21 @@
     
     <div class="parentGrid">
       <div class="contact-text">
-        Si quieres contactar conmigo para saber más de mis trabajos, hacer alguna sugerencia
-        o hablar, puedes encontrarme en las siguientes redes sociales.
+        <p>Si quieres contactar conmigo para saber más de mis trabajos, hacer alguna sugerencia
+        o hablar, puedes encontrarme en las siguientes redes sociales.</p>
+
+        <!-- LÍNEA PARA DESCARGAR EL CURRICULUM EN CASO DE QUE ALGÚN DÍA LO HAGA -->
+        <!-- <p><a class="btn btn-primary cv" download href="doc/doc.pdf">CV</a></p> -->
       </div>
 
       <div class="socialmedia">
         <div class="social-link" v-for="red in redes" :key="red.id">
           <a :href="red.link" target="_blank">
-            <img :src="red.img" :alt="red.media">
+            <img :src="red.img" :alt="red.name">
           </a>
-          <strong class="tituloRRSS">{{ red.media }}</strong>
+          <strong class="tituloRRSS">{{ red.name }}</strong>
           <a class="links" :href="red.link" target="_blank">
-            <p class="linkRRSS">{{ red.name }}</p>
+            <p class="linkRRSS">{{ red.linkOk }}</p>
           </a>
         </div>
       </div>
@@ -34,30 +37,30 @@ export default {
       redes: [
         {
           id: 1,
-          media: 'Github',
+          name: 'Github',
           img: require('../assets/media/img/icon-github.svg'),
-          name: 'https://github.com/anuskam',
+          linkOk: 'https://github.com/anuskam',
           link: 'https://github.com/anuskam'
         },
         {
           id: 2,
-          media: 'LinkedIn',
+          name: 'LinkedIn',
           img: require('../assets/media/img/icon-linkedin.svg'),
-          name: 'https://www.linkedin.com/in/annamoreta/',
+          linkOk: 'https://www.linkedin.com/in/annamoreta/',
           link: 'https://www.linkedin.com/in/annamoreta/'
         },
         {
           id: 3,
-          media: 'Correo electrónico',
+          name: 'Correo electrónico',
           img: require('../assets/media/img/icon-mail.svg'),
-          name: 'anna.moreta7@gmail.com',
-          link: 'mailto:anna.moreta7@gmail.com'
+          linkOk: 'amoretaa77@cepnet.net',
+          link: 'mailto:amoretaa77@cepnet.net'
         },
         {
           id: 4,
-          media: 'Twitter',
+          name: 'Twitter',
           img: require('../assets/media/img/icon-twitter.svg'),
-          name: 'https://twitter.com/anuskam15',
+          linkOk: 'https://twitter.com/anuskam15',
           link: 'https://twitter.com/anuskam15'
         },
       ]
@@ -133,6 +136,12 @@ h1{
 .links {
   text-decoration: none;
   color: white;
+}
+
+.cv {
+  /* padding: 5px 25px; */
+  display: flex;
+  align-content: center;
 }
 
 @media (max-width: 1024px){
