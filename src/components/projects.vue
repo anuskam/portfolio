@@ -8,44 +8,45 @@
     <div class="cards">
       <div class="card-list">
         <div class="card" v-for="project in projects" :key="project.id">
-          <!-- <a style="display: block;" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
-            <img :src="project.img" class="card-img-top" alt="" height="250px" @click="abrirModalInfo(project)">
-          <!-- </a> -->
+          <img :src="project.img" class="card-img-top" alt="" height="250px" @click="abrirModalInfo(project)">
           <div class="card-footer">
-            <small class="text-muted">{{ project.title }}</small>
+            <p class="text-white">{{ project.title }}</p>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <div class="card" v-for="project in projects" :key="project.id">
-          <a role="button" data-bs-toggle="modal" data-bs-target="#modalInfo">
-          <a role="button" @click="itemClicked(project)">
-            <img :src="project.img"/>
-          </a>
-          <div class="card-footer">
-            <p>Last updated 3 mins ago</p>
-          </div>
-        </div> -->
 
     <!-- MODAL INFO PROYECTOS -->
     <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="Modal con información complementaria" aria-hidden="true">
       <div class="modal-dialog modal-xl">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">{{ project.title }}</h5>
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">{{ project.title }}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
+
             <video width="700" controls :src="project.video"></video>
-            
-            <!-- <div class="tecnologias">
+          
+
+            <div class="tecnologias">
               <img v-if="project.technologies.includes('html')" src="../assets/media/img/tech-html.svg">
-              <img v-if="project.technologies.includes('javascipt')" src="../assets/media/img/tech-javascript.svg">
+              <img v-if="project.technologies.includes('css')" src="../assets/media/img/tech-css.svg">
+              <img v-if="project.technologies.includes('javascript')" src="../assets/media/img/tech-javascript.svg">
+              <img v-if="project.technologies.includes('bootstrap')" src="../assets/media/img/tech-bootstrap.svg">
+              <img v-if="project.technologies.includes('php')" src="../assets/media/img/tech-php.svg">
+              <img v-if="project.technologies.includes('angular')" src="../assets/media/img/tech-angular.svg">
+              <img v-if="project.technologies.includes('vue')" src="../assets/media/img/tech-vue.svg">
               <img v-if="project.technologies.includes('laravel')" src="../assets/media/img/tech-laravel.svg">
-            </div> -->
+              <img v-if="project.technologies.includes('mysql')" src="../assets/media/img/tech-mysql.svg">
+            </div>
+
+
+            <p class="descripcion">{{ project.desc }}</p>
+            <a class="btn" :href="project.codelink" role="button" target="_blank">Ver código</a>
+            <a class="btn" :href="project.pagelink" role="button" target="_blank">Ver página</a>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -67,16 +68,20 @@ export default {
       titulo: "", 
       descripcion: "",
       num: 0,
-      project: {},
+      project: {
+        technologies: [],
+      },
       video: require('../assets/media/video/project1.mp4'),
       projects: [
       {
         id: 1,
         title: "Recomerçem",
-        desc: "‘Recomerçem’ es un proyecto que pretende potenciar las compras en comercios locales en Barcelona. Para ello hemos creado cuatro juegos, mediante los que se pueden acumular puntos para acceder a promociones y descuentos en diferentes tiendas. ¿Te apuntas? ¡Sigue hacia abajo para conocer a Teresa y descubrir su historia!",
+        desc: "‘Recomerçem’ es un proyecto que pretende potenciar las compras en comercios locales en Barcelona. Para ello hemos creado cuatro juegos, mediante los que se pueden acumular puntos para acceder a promociones y descuentos en diferentes tiendas. ¿Te apuntas? ¡Descubre a Teresa y su historia!",
         technologies: ["html", "css", "javascript", "bootstrap", "php"],
         img: require('../assets/media/img/proyecto1.png'),    
         video: require('../assets/media/video/project1.mp4'),
+        codelink: 'https://github.com/anuskam/Project1.git',
+        pagelink: '',
       },
       {
         id: 2,
@@ -85,6 +90,8 @@ export default {
         technologies: ["angular", "bootstrap"],
         img: require('../assets/media/img/miniBiblioAngular.png'), 
         video: require('../assets/media/video/mipequenabiblio.mp4'),
+        codelink: 'https://github.com/anuskam/spa3.git',
+        pagelink: 'https://angularbiblioteca.netlify.app/',
       },
       {
         id: 3,
@@ -92,7 +99,9 @@ export default {
         desc: "Description of my card component2",
         technologies: ["html", "css", "vue", "laravel", "bootstrap"],
         img: require('../assets/media/img/proyecto2.png'), 
-        video: '<source src="../assets/media/video/project1.mp4" type="video/mp4">'
+        video: require('../assets/media/video/project1.mp4'),
+        codelink: 'https://github.com/anuskam/SGTA-Broggi.git',
+        pagelink: 'http://daw.abp-politecnics.com/daw2a02/SGTA-Broggi/public',
       },
       {
         id: 4,
@@ -100,7 +109,9 @@ export default {
         desc: "Description of my card component2",
         technologies: ["html", "css", "javascript"],
         img: require('../assets/media/img/proyecto2.png'),
-        video: '<source src="../assets/media/video/project1.mp4" type="video/mp4">'
+        video: require('../assets/media/video/project1.mp4'),
+        codelink: '',
+        pagelink: '',
       },      
       ]
     }
@@ -112,7 +123,15 @@ export default {
       $('#infoModal').modal('show');
     }, 
 
-  }
+
+  }, 
+  // computed: {
+  //   filterTechs(){
+  //     return this.projects.filter(project => {
+  //       return this.technologies.some(technology => project.technologies.includes(technology));
+  //     })
+  //   }
+  // }
   
 }
 </script>
@@ -124,14 +143,6 @@ export default {
   background-color: #372D3B;
   border: 1px solid black;
 }
-
-/* h1{
-  font-size: 50px;
-  margin-top: 11vh;
-  text-align: center;
-  color: white;
-  font-family: 'Yellowtail', cursive;
-} */
 
 .cabecera img {
   display: inline;
@@ -174,7 +185,7 @@ h1{
 
 .card {
   width: 440px;
-  height: 300px;
+  height: 270px;
   border-radius: 10px;
   overflow: hidden;
   margin: 35px 35px;
@@ -188,8 +199,8 @@ h1{
   filter: grayscale(0) saturate(105%) brightness(100%) contrast(100%);
 }
 
-.card > a > img {
-  position: absolute;
+.card > img {
+  /* position: absolute; */
   width: 100%;
   height: 85%;
   /* z-index: -10; */
@@ -209,23 +220,88 @@ h1{
   transition: all 0.2s ease-out;
 }
 
+.card-footer{
+  padding: 8px 15px;
+}
+
+video {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+
+.descripcion{
+  padding: 15px;
+  margin-right: 200px;
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .modal-body {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/*No se abre bien el modal si no lo modifico */
+@media only screen and (max-width: 993px) {
+  video {
+    width: 450px;
+    margin-left: 10px;
+  }
+
+  .descripcion{
+    padding: 15px;
+    margin-right: 10px;
+  }
+
+  .modal-body {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .card {
-  width: 320px;
-  height: 200px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 15px 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.15);
-  transform: scale3d(1, 1, 1);
-  transition: all 0.2s ease-out, filter 0.75s ease-out;
-  background: rgba(0,0,0,0.2);
-  filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
+    width: 320px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.15);
+    transform: scale3d(1, 1, 1);
+    transition: all 0.2s ease-out, filter 0.75s ease-out;
+    background: rgba(0,0,0,0.2);
+    filter: grayscale(0.1) saturate(95%) brightness(95%) contrast(90%);
   } 
+
+  .card > img {
+    width: 100%;
+    height: 80%;
+    /* z-index: -10; */
+    /* transform: scale(1.05); */
+    transition: all 0.2s ease-out, transform 0.2s ease-out, filter 0.75s ease-out;
+    filter: blur(0px);
+  }
+
+  .card-footer {
+    padding: 5px 15px;
+  }
+
+  video {
+    width: 345px;
+    margin-left: 0;
+  }
+  
 }
 
-.card-footer{
-  z-index: -20;
-}
+
 </style>
