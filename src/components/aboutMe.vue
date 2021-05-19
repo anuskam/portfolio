@@ -19,7 +19,39 @@
           <img src="../assets/media/img/videojuegos.png" height="600px">
         </div>
 
-        <div class="imageContainer">
+        <div v-show="curiosidad" class="imagenesEditadas" id="curiosidad">
+          <img src="../assets/media/img/videojuegos.png" height="600px">
+        </div>
+
+        <div v-show="estudios" class="imagenesEditadas" id="estudios">
+          <img src="../assets/media/img/estudios.png" height="600px">
+        </div>
+
+        <div v-show="analitica" class="imagenesEditadas" id="analitica">
+          <img src="../assets/media/img/videojuegos.png" height="600px">
+        </div>
+
+        <div v-show="helpful" class="imagenesEditadas" id="helpful">
+          <img src="../assets/media/img/videojuegos.png" height="600px">
+        </div>
+
+        <div v-show="boardgames" class="imagenesEditadas" id="boardgames">
+          <img src="../assets/media/img/boardgames.png" height="600px">
+        </div>
+
+        <div v-show="cats" class="imagenesEditadas" id="cats">
+          <img src="../assets/media/img/cats.png" height="600px">
+        </div>
+
+        <div v-show="flexible" class="imagenesEditadas" id="flexible">
+          <img src="../assets/media/img/videojuegos.png" height="600px">
+        </div>
+
+        <div v-show="videogames" class="imagenesEditadas" id="comunicacion">
+          <img src="../assets/media/img/videojuegos.png" height="600px">
+        </div>
+
+        <div class="imagenPrincipal">
           <img alt="avatar logo" src="../assets/media/img/yo.png" height="600px">
         </div>
       </div>
@@ -30,14 +62,14 @@
           <p @mouseover="creatividad=true" @mouseleave="creatividad = false" class="btn bolita" id="creatividad">Creatividad</p> 
           <p @mouseover="team=true" @mouseleave="team = false" class="btn bolita" id="team">Trabajo en equipo</p>
           <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Videojuegos</p>
-          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Curiosa</p>
-          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Estudios</p>
-          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Analítica</p>
-          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Helpful</p>
-          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Juegos de mesa</p>
-          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Gatos</p>
-          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Flexible</p>
-          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Comunicación</p>
+          <p @mouseover="curiosidad=true" @mouseleave="curiosidad = false" class="btn bolita" id="curiosidad">Curiosa</p>
+          <p @mouseover="estudios=true" @mouseleave="estudios = false" class="btn bolita" id="estudios">Estudios</p>
+          <p @mouseover="analitica=true" @mouseleave="analitica = false" class="btn bolita" id="analitica">Analítica</p>
+          <p @mouseover="helpful=true" @mouseleave="helpful = false" class="btn bolita" id="helpful">Helpful</p>
+          <p @mouseover="boardgames=true" @mouseleave="boardgames = false" class="btn bolita" id="boardgames">Juegos de mesa</p>
+          <p @mouseover="cats=true" @mouseleave="cats = false" class="btn bolita" id="cats">Gatos</p>
+          <p @mouseover="flexible=true" @mouseleave="flexible = false" class="btn bolita" id="flexible">Flexible</p>
+          <p @mouseover="comunicacion=true" @mouseleave="comunicacion = false" class="btn bolita" id="comunicacion">Comunicación</p>
         </div>
     </div>
 
@@ -64,7 +96,15 @@ export default {
     return {
       creatividad: false,
       team: false,
-      videogames: false
+      videogames: false, 
+      curiosidad: false,
+      estudios: false,
+      analitica: false,
+      helpful: false,
+      boardgames: false,
+      cats: false,
+      flexible: false,
+      comunicacion: false,
     }
   },
   
@@ -106,7 +146,7 @@ h1{
   grid-template-columns: 1fr 1fr;
 }
 
-.imageContainer{
+.imagenPrincipal{
   width: 300px;
   /* height: 2000px; */
   margin-left: 10vw;
@@ -155,7 +195,7 @@ h1{
     grid-row: 1;
   }
 
-  .imageContainer{
+  .imagenPrincipal{
     margin-top: 20vh;
     margin-bottom: 5vh;
   }
@@ -167,7 +207,12 @@ h1{
 }
 
 @media only screen and (max-width: 441px) {
-  .imageContainer img{
+
+  .cabecera {
+    margin-top: 14vh;
+  }
+
+  .imagenPrincipal img{
     margin-top: 15vh;
     height: 450px;
   }
@@ -184,8 +229,9 @@ h1{
     margin-top: 12vh;
   }
 
-  .imageContainer img{
+  .imagenPrincipal img{
     margin-top: 25vh;
+    margin-left: 10px;
     height: 400px;
   }
 
@@ -199,6 +245,36 @@ h1{
 @media only screen and (max-width: 360px) {
   .cabecera {
     margin-top: 15vh;
+  }
+
+  .imagenPrincipal img{
+    margin-top: 25vh;
+    margin-left: 8px;
+    height: 400px;
+  }
+
+  .imagenesEditadas img{
+    margin-top: 25vh;
+    margin-left: 8px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .cabecera {
+    margin-top: 8vh;
+  }
+
+  .imagenPrincipal img{
+    margin-top: 25vh;
+    margin-left: 0px;
+    height: 350px;
+  }
+
+  .imagenesEditadas img{
+    margin-top: 25vh;
+    margin-left: 0px;
+    height: 350px;
   }
 
 }

@@ -5,13 +5,54 @@
       <h1>Habilidades</h1>
     </div>
     <div class="apartados">
-      <div class="front-content">
+
+      <div class="card">
+        <div class="card-header">Front-end</div>
+        <div class="card-body front-content">
+          <div class="front" v-for="front in fronts" :key="front.id">
+            <img :src="front.img" :alt="front.nombre" width="60px">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Back-end</div>
+        <div class="card-body back-content">
+          <div class="back" v-for="back in backs" :key="back.id">
+            <img :src="back.img" :alt="back.nombre" width="60px">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Otros</div>
+        <div class="card-body otros-content">
+          <div class="otros" v-for="otro in otros" :key="otro.id">
+            <img :src="otro.img" :alt="otro.nombre" width="60px">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Idiomas</div>
+        <div class="card-body idiomas-content">
+          <div class="idiomas" v-for="idioma in idiomas" :key="idioma.id">
+            <img :src="idioma.img" :alt="idioma.nombre" width="60px">
+            <p class="nivel">{{ idioma.nivel }}</p>
+          </div>
+        </div>
+      </div>
+        
+      <!-- <div class="front-content">
         <div class="front" v-for="front in fronts" :key="front.id">
           <img :src="front.img" :alt="front.nombre" width="60px">
         </div>
-      </div>
+      </div> -->
       
-      <div class="back-content">
+      
+      
+      <!-- <div class="back-content">
+        <div class="titulito">Back-end</div>
         <div class="back" v-for="back in backs" :key="back.id">
           <img :src="back.img" :alt="back.nombre" width="70px">
         </div>
@@ -19,23 +60,23 @@
 
 
       <div class="otros-content">
+        <div class="titulito">Otros</div>
         <div class="otros" v-for="otro in otros" :key="otro.id">
           <img :src="otro.img" :alt="otro.nombre" width="60px">
         </div>
       </div>
 
       <div class="idiomas-content">
+        <div class="titulito">Idiomas</div>
         <div class="idiomas" v-for="idioma in idiomas" :key="idioma.id">
           <div class="flex-col">
             <img :src="idioma.img" :alt="idioma.nombre" width="50px">
-          <!-- <span class="nombreIdioma">{{ idioma.nombre }}</span>
-          - -->
           <p class="nivel">{{ idioma.nivel }}</p>
           </div>
           
         </div>
-      </div>
-    </div>
+      </div> -->
+    </div> 
     
     
     
@@ -50,25 +91,25 @@ export default {
       idiomas: [
         {
           id: 1,
-          // nombre: "Castellano",
+          nombre: "Castellano",
           nivel: "Nativo", 
           img: require('../assets/media/img/lang-spain.svg')
         },
         {
           id: 2,
-          // nombre: "Catalán", 
+          nombre: "Catalán", 
           nivel: "Nativo", 
           img: require('../assets/media/img/lang-catalonia.svg')
         },
         {
           id: 3,
-          // nombre: "Inglés",
+          nombre: "Inglés",
           nivel: "B2.2", 
           img: require('../assets/media/img/lang-united-kingdom.svg')
         },
         {
           id: 4, 
-          // nombre: "Francés", 
+          nombre: "Francés", 
           nivel: "B2.1", 
           img: require('../assets/media/img/lang-france.svg')
         },
@@ -188,8 +229,36 @@ export default {
 .cabecera {
   white-space: nowrap;
   margin-top: 12vh;
-  /* align-items: center; */
   text-align: center;
+}
+
+.card {
+  margin-left: 17%;
+  margin-right: 17%;
+  margin-top: 4vh;
+  margin-bottom: 5vh;
+}
+
+/* .card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 300px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  margin-top: 8vh;
+  margin-left: 15%;
+  margin-right: 15%;
+} */
+
+.card-header {
+  text-align: center;
+  background-color: #D9A129;
+  border-bottom: none;
+  padding: 6px 20px;
+  margin-top: 10px;
+  color: white;
+  
 }
 
 h1{
@@ -197,7 +266,6 @@ h1{
   font-size: 50px;
   margin-left: 1%;
   color: white;
-  /* font-family: 'Raleway', sans-serif; */
   font-family: 'Yellowtail', cursive;
 }
 
@@ -210,21 +278,12 @@ h1{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  /* background-color: rgba(255, 255, 255, 0.5); */
+  justify-content: space-evenly;
   background-color: white;
-  margin-bottom: 50px;
-  padding: 30px;
-  margin-top: 8vh;
-  margin-left: 15%;
-  margin-right: 15%;
   border-radius: 8px;
 }
 
-.idiomas-content {
-  display: flex;
-  justify-content: space-around;
-}
+
 
 .front-content img, .back-content img, .otros-content img {
   margin: 10px 10px;
