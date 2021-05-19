@@ -86,7 +86,7 @@ export default {
       {
         id: 2,
         title: "Mi pequeña biblioteca",
-        desc: "Description of my card component2",
+        desc: "Primera aplicación con el framework Angular. Pequeña biblioteca con registro de comics y libros con la sinópsis al entrar en cada uno.",
         technologies: ["angular", "bootstrap"],
         img: require('../assets/media/img/miniBiblioAngular.png'), 
         video: require('../assets/media/video/mipequenabiblio.mp4'),
@@ -125,13 +125,7 @@ export default {
 
 
   }, 
-  // computed: {
-  //   filterTechs(){
-  //     return this.projects.filter(project => {
-  //       return this.technologies.some(technology => project.technologies.includes(technology));
-  //     })
-  //   }
-  // }
+
   
 }
 </script>

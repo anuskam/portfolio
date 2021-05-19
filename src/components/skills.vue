@@ -26,10 +26,13 @@
 
       <div class="idiomas-content">
         <div class="idiomas" v-for="idioma in idiomas" :key="idioma.id">
-          <img :src="idioma.img" :alt="idioma.nombre" width="50px">
-          <span class="nombreIdioma">{{ idioma.nombre }}</span>
-          -
-          <span class="nivel font-italic">{{ idioma.nivel }}</span>
+          <div class="flex-col">
+            <img :src="idioma.img" :alt="idioma.nombre" width="50px">
+          <!-- <span class="nombreIdioma">{{ idioma.nombre }}</span>
+          - -->
+          <p class="nivel">{{ idioma.nivel }}</p>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -47,25 +50,25 @@ export default {
       idiomas: [
         {
           id: 1,
-          nombre: "Castellano",
+          // nombre: "Castellano",
           nivel: "Nativo", 
           img: require('../assets/media/img/lang-spain.svg')
         },
         {
           id: 2,
-          nombre: "Catalán", 
+          // nombre: "Catalán", 
           nivel: "Nativo", 
           img: require('../assets/media/img/lang-catalonia.svg')
         },
         {
           id: 3,
-          nombre: "Inglés",
+          // nombre: "Inglés",
           nivel: "B2.2", 
           img: require('../assets/media/img/lang-united-kingdom.svg')
         },
         {
           id: 4, 
-          nombre: "Francés", 
+          // nombre: "Francés", 
           nivel: "B2.1", 
           img: require('../assets/media/img/lang-france.svg')
         },
@@ -175,14 +178,6 @@ export default {
   border: 1px solid black;
 }
 
-/* h1{
-  font-size: 50px;
-  background-color: #372D3B;
-  margin-top: 11vh;
-  text-align: center;
-  color: white;
-  font-family: 'Yellowtail', cursive;
-} */
 
 .cabecera img {
   display: inline;
@@ -226,6 +221,11 @@ h1{
   border-radius: 8px;
 }
 
+.idiomas-content {
+  display: flex;
+  justify-content: space-around;
+}
+
 .front-content img, .back-content img, .otros-content img {
   margin: 10px 10px;
 }
@@ -235,9 +235,10 @@ h1{
   grid-template-columns: 1fr 1fr;
 }
 
-.idiomas{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
+.idiomas p {
+  text-align: center;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 700px) {
