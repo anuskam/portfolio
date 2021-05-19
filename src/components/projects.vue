@@ -32,15 +32,15 @@
           
 
             <div class="tecnologias">
-              <img v-if="project.technologies.includes('html')" src="../assets/media/img/tech-html.svg">
-              <img v-if="project.technologies.includes('css')" src="../assets/media/img/tech-css.svg">
-              <img v-if="project.technologies.includes('javascript')" src="../assets/media/img/tech-javascript.svg">
-              <img v-if="project.technologies.includes('bootstrap')" src="../assets/media/img/tech-bootstrap.svg">
-              <img v-if="project.technologies.includes('php')" src="../assets/media/img/tech-php.svg">
-              <img v-if="project.technologies.includes('angular')" src="../assets/media/img/tech-angular.svg">
-              <img v-if="project.technologies.includes('vue')" src="../assets/media/img/tech-vue.svg">
-              <img v-if="project.technologies.includes('laravel')" src="../assets/media/img/tech-laravel.svg">
-              <img v-if="project.technologies.includes('mysql')" src="../assets/media/img/tech-mysql.svg">
+              <img v-if="project.technologies.includes('html')" src="../assets/media/img/tech-html.svg" width="50px">
+              <img v-if="project.technologies.includes('css')" src="../assets/media/img/tech-css.svg" width="50px">
+              <img v-if="project.technologies.includes('javascript')" src="../assets/media/img/tech-javascript.svg" width="50px">
+              <img v-if="project.technologies.includes('bootstrap')" src="../assets/media/img/tech-bootstrap.svg" width="50px">
+              <img v-if="project.technologies.includes('php')" src="../assets/media/img/tech-php.svg" width="50px">
+              <img v-if="project.technologies.includes('angular')" src="../assets/media/img/tech-angular.svg" width="50px">
+              <img v-if="project.technologies.includes('vue')" src="../assets/media/img/tech-vue.svg" width="50px">
+              <img v-if="project.technologies.includes('laravel')" src="../assets/media/img/tech-laravel.svg" width="50px">
+              <img v-if="project.technologies.includes('mysql')" src="../assets/media/img/tech-mysql.svg" width="50px">
             </div>
 
 
@@ -302,6 +302,7 @@ video {
   }
   
 }
+
 
 
 </style>

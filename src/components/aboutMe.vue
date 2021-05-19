@@ -7,29 +7,37 @@
 
     <div class="gridParent">
       <div class="imagenes">
-        <div v-show="hover" class="imagenesEditadas" id="creatividad">
-          <img src="../assets/media/img/creatividad.png" height="500px">
+        <div v-show="creatividad" class="imagenesEditadas" id="creatividad">
+          <img src="../assets/media/img/creatividad.png" height="600px">
         </div>
 
-        <div v-show="hover3" class="imagenesEditadas" id="team">
-          <img src="../assets/media/img/teamworking.png" height="500px">
+        <div v-show="team" class="imagenesEditadas" id="team">
+          <img src="../assets/media/img/teamworking.png" height="600px">
         </div>
 
-        <div v-show="hover4" class="imagenesEditadas" id="videogames">
-          <img src="../assets/media/img/videojuegos.png" height="500px">
+        <div v-show="videogames" class="imagenesEditadas" id="videogames">
+          <img src="../assets/media/img/videojuegos.png" height="600px">
         </div>
 
         <div class="imageContainer">
-          <img alt="avatar logo" src="../assets/media/img/yo.png" height="500px">
+          <img alt="avatar logo" src="../assets/media/img/yo.png" height="600px">
         </div>
       </div>
 
       <div class="aboutContainer">
+        <div class="explicacion">Interactúa con los elementos para conocerme</div>
         <div class="aboutBall">
-          <p @mouseover="hover=true" @mouseleave="hover = false" class="btn bolita" id="creatividad">Creatividad</p> 
-          <p @mouseover="hover2=true" @mouseleave="hover2 = false" class="btn bolita" >2</p>
-          <p @mouseover="hover3=true" @mouseleave="hover3 = false" class="btn bolita" id="team">Trabajo en equipo</p>
-          <p @mouseover="hover4=true" @mouseleave="hover4 = false" class="btn bolita" id="videogames">Videojuegos</p>
+          <p @mouseover="creatividad=true" @mouseleave="creatividad = false" class="btn bolita" id="creatividad">Creatividad</p> 
+          <p @mouseover="team=true" @mouseleave="team = false" class="btn bolita" id="team">Trabajo en equipo</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Videojuegos</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Curiosa</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Estudios</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Analítica</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Helpful</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Juegos de mesa</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Gatos</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Flexible</p>
+          <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Comunicación</p>
         </div>
     </div>
 
@@ -54,10 +62,9 @@
 export default {
   data(){
     return {
-      hover: false,
-      hover2: false,
-      hover3: false,
-      hover4: false
+      creatividad: false,
+      team: false,
+      videogames: false
     }
   },
   
@@ -97,7 +104,6 @@ h1{
 .gridParent {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 5%;
 }
 
 .imageContainer{
@@ -113,10 +119,8 @@ h1{
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 700px;
-  /* align-items: center;
   justify-content: center;
-  margin-left: 150px; */
+  max-width: 700px;
 }
 
 .aboutBall > p {
@@ -128,7 +132,6 @@ h1{
   width: 300px;
   height: 2000px;
   margin-left: 10vw;
-  /* bottom: 80%; */
 }
 
 .btn {
@@ -136,16 +139,72 @@ h1{
   padding: 6px 12px;
 }
 
-/* .bolita{
-  background: #4758fc;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-} */
-
-#bolita2{
-  width: 49.5%;
+.explicacion {
+  padding-top: 5%;
+  color: white;
+  margin-left: 20%;
 }
+
+@media only screen and (max-width: 880px) {
+  .gridParent {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .aboutContainer {
+    grid-row: 1;
+  }
+
+  .imageContainer{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+  }
+
+  .imagenesEditadas{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+  }
+}
+
+@media only screen and (max-width: 441px) {
+  .imageContainer img{
+    margin-top: 15vh;
+    height: 450px;
+  }
+
+  .imagenesEditadas img{
+    margin-top: 15vh;
+    height: 450px;
+  }
+}
+
+
+@media only screen and (max-width: 375px) {
+  .cabecera {
+    margin-top: 12vh;
+  }
+
+  .imageContainer img{
+    margin-top: 25vh;
+    height: 400px;
+  }
+
+  .imagenesEditadas img{
+    margin-top: 25vh;
+    height: 400px;
+  }
+}
+
+
+@media only screen and (max-width: 360px) {
+  .cabecera {
+    margin-top: 15vh;
+  }
+
+}
+
+
+
 
 
 </style>

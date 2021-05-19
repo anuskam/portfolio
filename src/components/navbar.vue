@@ -1,57 +1,31 @@
 <template>
 <div class="navContent fixed-top">
-  <!-- <nav class="navbar p-2 sticky-top navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menú de navegación">
-        <burguer></burguer>
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="#home" v-smooth-scroll class="navbar-brand"><img src="../assets/media/img/avatar.svg" class="avatar"></a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menú de navegación">
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <burguer></burguer>
+    </button>
+
+    <a href="#home" v-smooth-scroll class="navbar-brand"><img src="../assets/media/img/avatar.svg" class="avatar"></a>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+        <li class="nav-item" id="aboutMe">
+          <a href="#sobreMi" v-smooth-scroll class="nav-link horizontalOverlay">Sobre mi</a>
+        </li>
+        <li class="nav-item" id="skills">
+          <a href="#habilidades" v-smooth-scroll class="nav-link horizontalOverlay">Habilidades</a>
+        </li>
+        <li class="nav-item" id="projects">
+          <a href="#proyectos" v-smooth-scroll class="nav-link horizontalOverlay">Proyectos</a>
+        </li>
+        <li class="nav-item" id="contact">
+          <a href="#contacto" v-smooth-scroll class="nav-link horizontalOverlay">Contacto</a>
+        </li>
+      </ul>
       
-      <div class="collapse navbar-collapse container" id="navbar">
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-          <li class="nav-item" id="aboutMe">
-            <a href="#sobreMi" v-smooth-scroll class="nav-link horizontalOverlay">Sobre mi</a>
-          </li>
-          <li class="nav-item" id="skills">
-            <a href="#habilidades" v-smooth-scroll class="nav-link horizontalOverlay">Habilidades</a>
-          </li>
-          <li class="nav-item" id="projects">
-            <a href="#proyectos" v-smooth-scroll class="nav-link horizontalOverlay">Proyectos</a>
-          </li>
-          <li class="nav-item" id="contact">
-            <a href="#contacto" v-smooth-scroll class="nav-link horizontalOverlay">Contacto</a>
-          </li>
-        </ul>
-      </div>
     </div>
-  </nav> -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menú de navegación">
-    <!-- <span class="navbar-toggler-icon"></span> -->
-    <burguer></burguer>
-  </button>
-
-  <a href="#home" v-smooth-scroll class="navbar-brand"><img src="../assets/media/img/avatar.svg" class="avatar"></a>
-
-  <div class="collapse navbar-collapse" id="navbar">
-    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-      <li class="nav-item" id="aboutMe">
-        <a href="#sobreMi" v-smooth-scroll class="nav-link horizontalOverlay">Sobre mi</a>
-      </li>
-      <li class="nav-item" id="skills">
-        <a href="#habilidades" v-smooth-scroll class="nav-link horizontalOverlay">Habilidades</a>
-      </li>
-      <li class="nav-item" id="projects">
-        <a href="#proyectos" v-smooth-scroll class="nav-link horizontalOverlay">Proyectos</a>
-      </li>
-      <li class="nav-item" id="contact">
-        <a href="#contacto" v-smooth-scroll class="nav-link horizontalOverlay">Contacto</a>
-      </li>
-    </ul>
-    
-  </div>
-</nav>
+  </nav>
 
 </div>
 
@@ -77,6 +51,10 @@ export default {
 <style scoped>
 .avatar{
   height: 50px;
+}
+
+nav {
+  padding: 4px 16px;
 }
 
 .navContent{

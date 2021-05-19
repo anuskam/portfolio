@@ -4,21 +4,37 @@
       <img src="../assets/media/img/meow_business.png">
       <h1>Habilidades</h1>
     </div>
-    <div class="lenguajes">
-      <div class="lenguajes-content" v-for="lenguaje in lenguajes" :key="lenguaje.id">
-        <img :src="lenguaje.img" :alt="lenguaje.nombre" width="50px">
+    <div class="apartados">
+      <div class="front-content">
+        <div class="front" v-for="front in fronts" :key="front.id">
+          <img :src="front.img" :alt="front.nombre" width="60px">
+        </div>
+      </div>
+      
+      <div class="back-content">
+        <div class="back" v-for="back in backs" :key="back.id">
+          <img :src="back.img" :alt="back.nombre" width="70px">
+        </div>
+      </div>
 
+
+      <div class="otros-content">
+        <div class="otros" v-for="otro in otros" :key="otro.id">
+          <img :src="otro.img" :alt="otro.nombre" width="60px">
+        </div>
+      </div>
+
+      <div class="idiomas-content">
+        <div class="idiomas" v-for="idioma in idiomas" :key="idioma.id">
+          <img :src="idioma.img" :alt="idioma.nombre" width="50px">
+          <span class="nombreIdioma">{{ idioma.nombre }}</span>
+          -
+          <span class="nivel font-italic">{{ idioma.nivel }}</span>
+        </div>
       </div>
     </div>
     
-    <div class="idiomas">
-      <div class="idiomas-content" v-for="idioma in idiomas" :key="idioma.id">
-        <img :src="idioma.img" :alt="idioma.nombre" width="50px">
-        <span class="nombreIdioma">{{ idioma.nombre }}</span>
-        -
-        <span class="nivel font-italic">{{ idioma.nivel }}</span>
-      </div>
-    </div>
+    
     
   </div>
 
@@ -54,58 +70,97 @@ export default {
           img: require('../assets/media/img/lang-france.svg')
         },
       ],
-      lenguajes: [
-      {
+      fronts: [
+        {
         id: 1,
         nombre: "HTML",
         img: require('../assets/media/img/tech-html.svg'),
-        info: "80%",   
-      },
-      {
-        id: 2,
-        nombre: "CSS, SASS",
-        
-        info: "80%",
-      },
-      {
-        id: 3,
-        nombre: "Javascript",
-        img: require('../assets/media/img/tech-javascript.svg'),
-        info: "80%", 
-      },
-      {
-        id: 4,
-        nombre: "Laravel, Postman (??)",
-        img: require('../assets/media/img/tech-laravel.svg'),
-        info: "80%",
-      },
-      {
-        id: 5,
-        nombre: "PHP",
-        info: "80%",
-      },
-      {
-        id: 6,
-        nombre: "Git, github",
-        info: "80%",
-      },
-      {
-        id: 7,
-        nombre: "Vue, Angular",
-        info: "80%",
-      },
-      {
-        id: 8,
-        nombre: "Illustrator, Photoshop, InDesign",
-        info: "Con estas herramientas de Adobe sé maquetar, vectorizar y editar imagenes de manera autodidacta",
-      },
-      {
-        id: 9,
-        nombre: "Adobe Premiere Pro",
-        info: "Montaje de video y audio",
-      },
-      
-    ]
+        },
+        {
+          id: 2,
+          nombre: "CSS",
+          img: require('../assets/media/img/tech-css.svg'),
+        },
+        {
+          id: 3,
+          nombre: "Javascript",
+          img: require('../assets/media/img/tech-javascript.svg'),
+        },
+        {
+          id: 4,
+          nombre: "Vue",
+          img: require('../assets/media/img/tech-vue.svg'),
+        },
+        {
+          id: 5,
+          nombre: "Angular",
+          img: require('../assets/media/img/tech-angular.svg'),
+        },
+        {
+          id: 6,
+          nombre: "Bootstrap",
+          img: require('../assets/media/img/tech-bootstrap.svg'),
+        },
+      ],
+      backs: [
+        {
+          id: 1,
+          nombre: "Laravel",
+          img: require('../assets/media/img/tech-laravel.svg'),
+        },
+        {
+          id: 2,
+          nombre: "PHP",
+          img: require('../assets/media/img/tech-php.svg'),
+        },
+        {
+          id: 3,
+          nombre: "Java",
+          img: require('../assets/media/img/tech-java.svg'),
+        },
+        {
+          id: 4,
+          nombre: "MySQL",
+          img: require('../assets/media/img/tech-mysql.svg'),
+        },
+        {
+          id: 5,
+          nombre: "C++",
+          img: require('../assets/media/img/tech-c++.svg'),
+        },
+      ],
+      otros: [
+        {
+          id: 1,
+          nombre: "Illustrator",
+          img: require('../assets/media/img/tech-illustrator.svg'),
+        },
+        {
+          id: 2,
+          nombre: "Photoshop",
+          img: require('../assets/media/img/tech-photoshop.svg'),
+        },
+        {
+          id: 3,
+          nombre: "InDesign",
+          img: require('../assets/media/img/tech-indesign.svg'),
+        },
+        {
+          id: 4,
+          nombre: "Adobe Premiere Pro",
+          img: require('../assets/media/img/tech-premiere.svg'),
+        },
+        {
+          id: 5,
+          nombre: "Git",
+          img: require('../assets/media/img/tech-git.svg'),
+        },
+        {
+          id: 6,
+          nombre: "Github",
+          img: require('../assets/media/img/tech-github.svg'),
+        },
+      ],
     }
   }
   
@@ -155,17 +210,41 @@ h1{
   margin-bottom: 2%;
 }
 
-.nombreIdioma {
-  color: white;
-  margin-left: 1%;
+
+.front-content, .back-content, .otros-content, .idiomas-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  background-color: white;
+  margin-bottom: 50px;
+  padding: 30px;
+  margin-top: 8vh;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 8px;
 }
 
-.nivel{
-  color: white;
+.front-content img, .back-content img, .otros-content img {
+  margin: 10px 10px;
 }
 
-.idiomas {
-  color: white;
+.apartados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.idiomas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 700px) {
+  .apartados {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 </style>
