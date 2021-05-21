@@ -32,21 +32,29 @@
           
 
             <div class="tecnologias">
-              <img v-if="project.technologies.includes('html')" src="../assets/media/img/tech-html.svg" width="50px">
-              <img v-if="project.technologies.includes('css')" src="../assets/media/img/tech-css.svg" width="50px">
-              <img v-if="project.technologies.includes('javascript')" src="../assets/media/img/tech-javascript.svg" width="50px">
-              <img v-if="project.technologies.includes('bootstrap')" src="../assets/media/img/tech-bootstrap.svg" width="50px">
-              <img v-if="project.technologies.includes('php')" src="../assets/media/img/tech-php.svg" width="50px">
-              <img v-if="project.technologies.includes('angular')" src="../assets/media/img/tech-angular.svg" width="50px">
-              <img v-if="project.technologies.includes('vue')" src="../assets/media/img/tech-vue.svg" width="50px">
-              <img v-if="project.technologies.includes('laravel')" src="../assets/media/img/tech-laravel.svg" width="50px">
-              <img v-if="project.technologies.includes('mysql')" src="../assets/media/img/tech-mysql.svg" width="50px">
+              <div class="explicacionTecnologias">Tecnologías utilizadas</div>
+              <div class="imagenesTecnologias">
+                <img v-if="project.technologies.includes('html')" src="../assets/media/img/tech-html.svg" width="50px">
+                <img v-if="project.technologies.includes('css')" src="../assets/media/img/tech-css.svg" width="50px">
+                <img v-if="project.technologies.includes('javascript')" src="../assets/media/img/tech-javascript.svg" width="50px">
+                <img v-if="project.technologies.includes('bootstrap')" src="../assets/media/img/tech-bootstrap.svg" width="50px">
+                <img v-if="project.technologies.includes('php')" src="../assets/media/img/tech-php.svg" width="50px">
+                <img v-if="project.technologies.includes('angular')" src="../assets/media/img/tech-angular.svg" width="50px">
+                <img v-if="project.technologies.includes('vue')" src="../assets/media/img/tech-vue.svg" width="50px">
+                <img v-if="project.technologies.includes('laravel')" src="../assets/media/img/tech-laravel.svg" width="50px">
+                <img v-if="project.technologies.includes('mysql')" src="../assets/media/img/tech-mysql.svg" width="50px">
+              </div>
+              
             </div>
 
 
             <p class="descripcion">{{ project.desc }}</p>
-            <a class="btn" :href="project.codelink" role="button" target="_blank">Ver código</a>
-            <a class="btn" :href="project.pagelink" role="button" target="_blank">Ver página</a>
+            <br>
+            <div class="redireccion">
+              <a class="btn" :href="project.codelink" role="button" target="_blank">Ver código</a>
+              <a class="btn" :href="project.pagelink" role="button" target="_blank">Ver página</a>
+            </div>
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -147,7 +155,6 @@ export default {
 .cabecera {
   white-space: nowrap;
   margin-top: 11vh;
-  /* align-items: center; */
   text-align: center;
 }
 
@@ -156,7 +163,6 @@ h1{
   font-size: 50px;
   margin-left: 1%;
   color: white;
-  /* font-family: 'Raleway', sans-serif; */
   font-family: 'Yellowtail', cursive;
 }
 
@@ -194,11 +200,8 @@ h1{
 }
 
 .card > img {
-  /* position: absolute; */
   width: 100%;
   height: 85%;
-  /* z-index: -10; */
-  /* transform: scale(1.05); */
   transition: all 0.2s ease-out, transform 0.2s ease-out, filter 0.75s ease-out;
   filter: blur(0px);
 }
@@ -226,13 +229,37 @@ video {
 
 .descripcion{
   padding: 15px;
-  margin-right: 200px;
+  margin-right: 80px;
+  margin-top: 20px;
 }
 
 .modal-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+
+.explicacionTecnologias {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.imagenesTecnologias {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.redireccion {
+  text-align: end;
+  margin-right: 40px;
+}
+
+.redireccion .btn {
+  background-color: #D9A129;
+  margin-left: 40px;
+}
+
 
 
 @media only screen and (max-width: 1200px) {
@@ -254,6 +281,7 @@ video {
   .descripcion{
     padding: 15px;
     margin-right: 10px;
+    margin-top: 20px;
   }
 
   .modal-body {
@@ -280,8 +308,6 @@ video {
   .card > img {
     width: 100%;
     height: 80%;
-    /* z-index: -10; */
-    /* transform: scale(1.05); */
     transition: all 0.2s ease-out, transform 0.2s ease-out, filter 0.75s ease-out;
     filter: blur(0px);
   }

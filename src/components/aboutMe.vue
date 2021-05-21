@@ -249,13 +249,13 @@ h1{
 
   .imagenPrincipal img{
     margin-top: 25vh;
-    margin-left: 8px;
+    margin-left: -15px;
     height: 400px;
   }
 
   .imagenesEditadas img{
     margin-top: 25vh;
-    margin-left: 8px;
+    margin-left: -15px;
     height: 400px;
   }
 }
