@@ -19,8 +19,8 @@
           <img src="../assets/media/img/videojuegos.png" height="600px">
         </div>
 
-        <div v-show="curiosidad" class="imagenesEditadas" id="curiosidad">
-          <img src="../assets/media/img/videojuegos.png" height="600px">
+        <div v-show="divertida" class="imagenesEditadas" id="divertida">
+          <img src="../assets/media/img/divertida.png" height="600px">
         </div>
 
         <div v-show="estudios" class="imagenesEditadas" id="estudios">
@@ -32,7 +32,7 @@
         </div>
 
         <div v-show="helpful" class="imagenesEditadas" id="helpful">
-          <img src="../assets/media/img/videojuegos.png" height="600px">
+          <img src="../assets/media/img/helpful.png" height="600px">
         </div>
 
         <div v-show="boardgames" class="imagenesEditadas" id="boardgames">
@@ -47,8 +47,8 @@
           <img src="../assets/media/img/videojuegos.png" height="600px">
         </div>
 
-        <div v-show="videogames" class="imagenesEditadas" id="comunicacion">
-          <img src="../assets/media/img/videojuegos.png" height="600px">
+        <div v-show="comunicacion" class="imagenesEditadas" id="comunicacion">
+          <img src="../assets/media/img/comunicacion.png" height="600px">
         </div>
 
         <div class="imagenPrincipal">
@@ -62,7 +62,7 @@
           <p @mouseover="creatividad=true" @mouseleave="creatividad = false" class="btn bolita" id="creatividad">Creatividad</p> 
           <p @mouseover="team=true" @mouseleave="team = false" class="btn bolita" id="team">Trabajo en equipo</p>
           <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Videojuegos</p>
-          <p @mouseover="curiosidad=true" @mouseleave="curiosidad = false" class="btn bolita" id="curiosidad">Curiosa</p>
+          <p @mouseover="divertida=true" @mouseleave="divertida = false" class="btn bolita" id="divertida">Divertida</p>
           <p @mouseover="estudios=true" @mouseleave="estudios = false" class="btn bolita" id="estudios">Estudios</p>
           <p @mouseover="analitica=true" @mouseleave="analitica = false" class="btn bolita" id="analitica">Analítica</p>
           <p @mouseover="helpful=true" @mouseleave="helpful = false" class="btn bolita" id="helpful">Helpful</p>
@@ -71,8 +71,12 @@
           <p @mouseover="flexible=true" @mouseleave="flexible = false" class="btn bolita" id="flexible">Flexible</p>
           <p @mouseover="comunicacion=true" @mouseleave="comunicacion = false" class="btn bolita" id="comunicacion">Comunicación</p>
         </div>
-    </div>
 
+        <div class="flecha">
+          <img src="../assets/media/img/flecha2.png" width="300px">
+        </div>
+    </div>
+    
     
 
     </div>
@@ -97,7 +101,7 @@ export default {
       creatividad: false,
       team: false,
       videogames: false, 
-      curiosidad: false,
+      divertida: false,
       estudios: false,
       analitica: false,
       helpful: false,
@@ -185,6 +189,11 @@ h1{
   margin-left: 20%;
 }
 
+.flecha img {
+  margin-top: 220px;
+  margin-right: 50px;
+}
+
 @media only screen and (max-width: 880px) {
   .gridParent {
     display: grid;
@@ -204,6 +213,13 @@ h1{
     margin-top: 20vh;
     margin-bottom: 5vh;
   }
+
+  .flecha img {
+    margin-top: 0;
+    visibility: hidden;
+  }
+
+
 }
 
 @media only screen and (max-width: 441px) {

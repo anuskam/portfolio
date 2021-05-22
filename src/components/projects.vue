@@ -85,7 +85,7 @@ export default {
         id: 1,
         title: "Recomerçem",
         desc: "‘Recomerçem’ es un proyecto que pretende potenciar las compras en comercios locales en Barcelona. Para ello hemos creado cuatro juegos, mediante los que se pueden acumular puntos para acceder a promociones y descuentos en diferentes tiendas. ¿Te apuntas? ¡Descubre a Teresa y su historia!",
-        technologies: ["html", "css", "javascript", "bootstrap", "php"],
+        technologies: ["html", "css", "javascript", "bootstrap", "php", "mysql"],
         img: require('../assets/media/img/proyecto1.png'),    
         video: require('../assets/media/video/project1.mp4'),
         codelink: 'https://github.com/anuskam/Project1.git',
@@ -104,8 +104,8 @@ export default {
       {
         id: 3,
         title: "Broggi",
-        desc: "Description of my card component2",
-        technologies: ["html", "css", "vue", "laravel", "bootstrap"],
+        desc: "Simulador formativo para gestionar las demandas de asistencia de urgencia y emergencia sanitaria extrahospitalaria en Cataluña para el instituto Moisès Broggi",
+        technologies: ["html", "css", "javascript", "vue", "laravel", "bootstrap", "mysql"],
         img: require('../assets/media/img/proyecto2.png'), 
         video: require('../assets/media/video/project1.mp4'),
         codelink: 'https://github.com/anuskam/SGTA-Broggi.git',
@@ -242,11 +242,18 @@ video {
 .explicacionTecnologias {
   text-align: center;
   margin-top: 20px;
+  font-weight: bold;
 }
 
 .imagenesTecnologias {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
   justify-content: space-evenly;
+}
+
+.imagenesTecnologias img {
   margin-top: 20px;
 }
 
@@ -317,7 +324,7 @@ video {
   }
 
   video {
-    width: 345px;
+    width: 305px;
     margin-left: 0;
   }
   
