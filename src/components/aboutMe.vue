@@ -206,11 +206,13 @@ h1{
 
   .imagenPrincipal{
     margin-top: 20vh;
+    margin-left:60px;
     margin-bottom: 5vh;
   }
 
   .imagenesEditadas{
     margin-top: 20vh;
+    margin-left:60px;
     margin-bottom: 5vh;
   }
 
@@ -229,71 +231,74 @@ h1{
   }
 
   .imagenPrincipal img{
-    margin-top: 15vh;
+    margin-top: 5vh;
+    margin-left: -30px;
     height: 450px;
   }
 
   .imagenesEditadas img{
-    margin-top: 15vh;
+    margin-top: 5vh;
+    margin-left: -30px;
     height: 450px;
   }
 }
 
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 376px) {
   .cabecera {
     margin-top: 12vh;
   }
 
   .imagenPrincipal img{
-    margin-top: 25vh;
-    margin-left: 10px;
+    margin-top: 5vh;
+    margin-left: -15px;
     height: 400px;
   }
 
   .imagenesEditadas img{
-    margin-top: 25vh;
+    margin-top: 5vh;
+    margin-left: -15px;
     height: 400px;
   }
 }
 
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 361px) {
   .cabecera {
     margin-top: 15vh;
   }
 
   .imagenPrincipal img{
-    margin-top: 25vh;
-    margin-left: -15px;
+    margin-top: 5vh;
+    margin-left: -30px;
     height: 400px;
   }
 
   .imagenesEditadas img{
-    margin-top: 25vh;
-    margin-left: -15px;
+    margin-top: 5vh;
+    margin-left: -30px;
     height: 400px;
   }
 }
 
-@media only screen and (max-width: 320px) {
+/* @media only screen and (max-width: 321px) {
   .cabecera {
     margin-top: 8vh;
   }
 
   .imagenPrincipal img{
-    margin-top: 25vh;
-    margin-left: 0px;
+    margin-top: 5vh;
+    margin-left: -25px;
     height: 350px;
   }
 
   .imagenesEditadas img{
-    margin-top: 25vh;
-    margin-left: 0px;
+    margin-top: 5vh;
+    margin-left: -25px;
     height: 350px;
   }
 
-}
+} */
 
 
 
