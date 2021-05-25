@@ -95,7 +95,7 @@ export default {
         id: 2,
         title: "Mi pequeña biblioteca",
         desc: "Primera aplicación con el framework Angular. Pequeña biblioteca con registro de comics y libros con la sinópsis al entrar en cada uno.",
-        technologies: ["angular", "bootstrap"],
+        technologies: ["html", "css", "angular", "bootstrap"],
         img: require('../assets/media/img/miniBiblioAngular.png'), 
         video: require('../assets/media/video/mipequenabiblio.mp4'),
         codelink: 'https://github.com/anuskam/spa3.git',

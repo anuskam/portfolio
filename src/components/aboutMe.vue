@@ -190,7 +190,7 @@ h1{
 }
 
 .flecha img {
-  margin-top: 220px;
+  margin-top: 250px;
   margin-right: 50px;
 }
 
