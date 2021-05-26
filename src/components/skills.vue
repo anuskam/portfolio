@@ -216,7 +216,7 @@ export default {
 .skills {
   min-height: 100vh;
   background-color: #372D3B;
-  border: 1px solid black;
+  border: 1px solid #372D3B;
 }
 
 

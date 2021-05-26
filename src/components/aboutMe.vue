@@ -120,7 +120,7 @@ export default {
 .aboutMe {
   min-height: 100vh;
   background-color: #372D3B;
-  border: 1px solid black;
+  border: 1px solid #372D3B;
 }
 
 .cabecera img {
@@ -231,13 +231,13 @@ h1{
   }
 
   .imagenPrincipal img{
-    margin-top: 5vh;
+    /* margin-top: 2vh; */
     margin-left: -30px;
     height: 450px;
   }
 
   .imagenesEditadas img{
-    margin-top: 5vh;
+    /* margin-top: 2vh; */
     margin-left: -30px;
     height: 450px;
   }
@@ -264,6 +264,10 @@ h1{
 
 
 @media only screen and (max-width: 361px) {
+  .explicacion {
+    margin-left: 12%;
+  }
+
   .cabecera {
     margin-top: 15vh;
   }

@@ -1,6 +1,12 @@
 <template>
 <div class="principal" id="home">
   <navbar></navbar>
+  <div class="flecha">
+    <a href="#sobreMi" v-smooth-scroll>
+      <img src="../assets/media/img/flecha.svg" width="25%" alt="flecha" aria-label="flecha para ir al contenido">
+    </a>
+    
+  </div>
   <div class="background"></div>
   <div class="forest"></div>
   
@@ -24,7 +30,27 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+.flecha {
+  position: absolute;
+  margin-left: 47%;
+  margin-top: 650px;
+  z-index: 2;
+  animation-name: flecha;
+  animation: flecha 3s infinite;
+}
 
+@keyframes flecha {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  
+}
 
 .background {
   background-color: #372D3B;
@@ -62,26 +88,28 @@
   .forest {
     background-size: 1200px 420px;
     top: 50%;
-    /* overflow: hidden; */
   }
-}
 
-@media (max-width: 441px) {
-
-  .forest {
-    background-size: 1200px 420px;
-    top: 57%;
-    /* overflow: hidden; */
+  .flecha {
+    margin-left: 45%;
+    margin-top: 160%;
   }
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 412px) {
 
-  .forest {
-    background-size: 1200px 420px;
-    top: 30%;
-    /* overflow: hidden; */
+  .flecha {
+    margin-left: 44%;
+    margin-top: 160%;
+  }
+}
+
+@media (max-width: 361px) {
+
+  .flecha {
+    margin-left: 42%;
+    margin-top: 150%;
   }
 }
 

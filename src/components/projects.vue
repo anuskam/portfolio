@@ -34,8 +34,8 @@
             <div class="tecnologias">
               <div class="explicacionTecnologias">Tecnologías utilizadas</div>
               <div class="imagenesTecnologias">
-                <img v-if="project.technologies.includes('html')" src="../assets/media/img/tech-html.svg" width="50px">
-                <img v-if="project.technologies.includes('css')" src="../assets/media/img/tech-css.svg" width="50px">
+                <img v-if="project.technologies.includes('html')" src="../assets/media/img/tech-html.svg" width="45px">
+                <img v-if="project.technologies.includes('css')" src="../assets/media/img/tech-css.svg" width="45px">
                 <img v-if="project.technologies.includes('javascript')" src="../assets/media/img/tech-javascript.svg" width="50px">
                 <img v-if="project.technologies.includes('bootstrap')" src="../assets/media/img/tech-bootstrap.svg" width="50px">
                 <img v-if="project.technologies.includes('php')" src="../assets/media/img/tech-php.svg" width="50px">
@@ -43,10 +43,10 @@
                 <img v-if="project.technologies.includes('vue')" src="../assets/media/img/tech-vue.svg" width="50px">
                 <img v-if="project.technologies.includes('laravel')" src="../assets/media/img/tech-laravel.svg" width="50px">
                 <img v-if="project.technologies.includes('mysql')" src="../assets/media/img/tech-mysql.svg" width="50px">
+                <img v-if="project.technologies.includes('ionic')" src="../assets/media/img/tech-ionic.svg" width="90px">
               </div>
               
             </div>
-
 
             <p class="descripcion">{{ project.desc }}</p>
             <br>
@@ -89,7 +89,7 @@ export default {
         img: require('../assets/media/img/proyecto1.png'),    
         video: require('../assets/media/video/project1.mp4'),
         codelink: 'https://github.com/anuskam/Project1.git',
-        pagelink: '',
+        pagelink: 'https://anuskam.github.io/webAppEvidencias/tercers/game-anna.html',
       },
       {
         id: 2,
@@ -104,7 +104,7 @@ export default {
       {
         id: 3,
         title: "Broggi",
-        desc: "Simulador formativo para gestionar las demandas de asistencia de urgencia y emergencia sanitaria extrahospitalaria en Cataluña para el instituto Moisès Broggi",
+        desc: "Simulador formativo para que los estudiantes del instituto Moisès Broggi practiquen la gestion de las demandas de asistencia de urgencia y emergencia sanitaria extrahospitalaria en Cataluña.",
         technologies: ["html", "css", "javascript", "vue", "laravel", "bootstrap", "mysql"],
         img: require('../assets/media/img/proyecto2.png'), 
         video: require('../assets/media/video/project1.mp4'),
@@ -113,13 +113,13 @@ export default {
       },
       {
         id: 4,
-        title: "Game",
-        desc: "Description of my card component2",
-        technologies: ["html", "css", "javascript"],
-        img: require('../assets/media/img/proyecto2.png'),
-        video: require('../assets/media/video/project1.mp4'),
-        codelink: '',
-        pagelink: '',
+        title: "Juegos de mesa",
+        desc: "Aplicación con Ionic que usa la API Board Game Atlas para extraer datos sobre juegos de mesa. ",
+        technologies: ["html", "css", "bootstrap", "ionic"],
+        img: require('../assets/media/img/juegosmesa.png'),
+        video: require('../assets/media/video/juegosmesa.mp4'),
+        codelink: 'https://github.com/anuskam/juegosMesaIonic',
+        pagelink: 'https://juegosmesa.netlify.app/',
       },      
       ]
     }
@@ -143,7 +143,7 @@ export default {
 .proyectos {
   min-height: 100vh;
   background-color: #372D3B;
-  border: 1px solid black;
+  border: 1px solid #372D3B;
 }
 
 .cabecera img {
