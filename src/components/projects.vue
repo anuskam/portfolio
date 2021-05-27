@@ -324,7 +324,7 @@ video {
   }
 
   video {
-    width: 305px;
+    width: 100%;
     margin-left: 0;
   }
 
