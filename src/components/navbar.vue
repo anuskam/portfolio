@@ -6,21 +6,21 @@
       <burguer></burguer>
     </button>
 
-    <a href="#home" v-smooth-scroll class="navbar-brand"><img src="../assets/media/img/avatar.svg" class="avatar"></a>
+    <a href="#home" v-smooth-scroll class="navbar-brand"><img src="../assets/media/img/avatar.svg" class="avatar" alt="avatar"></a>
 
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
         <li class="nav-item" id="aboutMe">
-          <a href="#sobreMi" v-smooth-scroll class="nav-link horizontalOverlay">Sobre mi</a>
+          <a href="#sobreMi" v-smooth-scroll class="nav-link horizontalOverlay" aria-label="link-sobreMi">Sobre mi</a>
         </li>
         <li class="nav-item" id="skills">
-          <a href="#habilidades" v-smooth-scroll class="nav-link horizontalOverlay">Habilidades</a>
+          <a href="#habilidades" v-smooth-scroll class="nav-link horizontalOverlay" aria-label="link-habilidades">Habilidades</a>
         </li>
         <li class="nav-item" id="projects">
-          <a href="#proyectos" v-smooth-scroll class="nav-link horizontalOverlay">Proyectos</a>
+          <a href="#proyectos" v-smooth-scroll class="nav-link horizontalOverlay" aria-label="link-proyectos">Proyectos</a>
         </li>
         <li class="nav-item" id="contact">
-          <a href="#contacto" v-smooth-scroll class="nav-link horizontalOverlay">Contacto</a>
+          <a href="#contacto" v-smooth-scroll class="nav-link horizontalOverlay" aria-label="link-contacto">Contacto</a>
         </li>
       </ul>
       

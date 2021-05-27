@@ -1,14 +1,14 @@
 <template>
   <div class="proyectos" id="proyectos">
     <div class="cabecera">
-      <img src="../assets/media/img/meow_code.gif">
+      <img src="../assets/media/img/meow_code.gif" alt="gatitoProyectos">
       <h1>Proyectos</h1>
     </div>
     <!-- <h1>Proyectos</h1> -->
     <div class="cards">
       <div class="card-list">
         <div class="card" v-for="project in projects" :key="project.id">
-          <img :src="project.img" class="card-img-top" alt="" height="250px" @click="abrirModalInfo(project)">
+          <img :src="project.img" alt="proyectos" class="card-img-top" height="250px" @click="abrirModalInfo(project)">
           <div class="card-footer">
             <p class="text-white">{{ project.title }}</p>
           </div>
@@ -327,6 +327,15 @@ video {
     width: 305px;
     margin-left: 0;
   }
+
+  .redireccion .btn {
+    background-color: #D9A129;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
   
 }
 

@@ -2,8 +2,8 @@
 <div class="principal" id="home">
   <navbar></navbar>
   <div class="flecha">
-    <a href="#sobreMi" v-smooth-scroll>
-      <img src="../assets/media/img/flecha.svg" width="25%" alt="flecha" aria-label="flecha para ir al contenido">
+    <a href="#sobreMi" aria-label="linkSobreMi" v-smooth-scroll>
+      <img src="../assets/media/img/flecha.svg" alt="flechaContenido" width="25%">
     </a>
     
   </div>
@@ -33,7 +33,7 @@
 .flecha {
   position: absolute;
   margin-left: 47%;
-  margin-top: 650px;
+  margin-top: 40%;
   z-index: 2;
   animation-name: flecha;
   animation: flecha 3s infinite;
@@ -92,7 +92,7 @@
 
   .flecha {
     margin-left: 45%;
-    margin-top: 160%;
+    margin-top: 100%;
   }
 }
 

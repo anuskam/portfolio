@@ -1,58 +1,58 @@
 <template>
   <div class="aboutMe pt-5" id="sobreMi">
     <div class="cabecera">
-      <img src="../assets/media/img/meow_bread.png">
+      <img src="../assets/media/img/meow_bread.png" alt="gatitoSobreMi">
       <h1>Sobre mi</h1>
     </div>
 
     <div class="gridParent">
       <div class="imagenes">
         <div v-show="creatividad" class="imagenesEditadas" id="creatividad">
-          <img src="../assets/media/img/creatividad.png" height="600px">
+          <img src="../assets/media/img/creatividad.png" alt="creatividad" height="600px">
         </div>
 
         <div v-show="team" class="imagenesEditadas" id="team">
-          <img src="../assets/media/img/teamworking.png" height="600px">
+          <img src="../assets/media/img/teamworking.png" alt="team" height="600px">
         </div>
 
         <div v-show="videogames" class="imagenesEditadas" id="videogames">
-          <img src="../assets/media/img/videojuegos.png" height="600px">
+          <img src="../assets/media/img/videojuegos.png" alt="videogames" height="600px">
         </div>
 
         <div v-show="divertida" class="imagenesEditadas" id="divertida">
-          <img src="../assets/media/img/divertida.png" height="600px">
+          <img src="../assets/media/img/divertida.png" alt="divertida" height="600px">
         </div>
 
         <div v-show="estudios" class="imagenesEditadas" id="estudios">
-          <img src="../assets/media/img/estudios.png" height="600px">
+          <img src="../assets/media/img/estudios.png" alt="estudios" height="600px">
         </div>
 
         <div v-show="analitica" class="imagenesEditadas" id="analitica">
-          <img src="../assets/media/img/videojuegos.png" height="600px">
+          <img src="../assets/media/img/videojuegos.png" alt="analitica" height="600px">
         </div>
 
         <div v-show="helpful" class="imagenesEditadas" id="helpful">
-          <img src="../assets/media/img/helpful.png" height="600px">
+          <img src="../assets/media/img/helpful.png" alt="helpful" height="600px">
         </div>
 
         <div v-show="boardgames" class="imagenesEditadas" id="boardgames">
-          <img src="../assets/media/img/boardgames.png" height="600px">
+          <img src="../assets/media/img/boardgames.png" alt="boardgames" height="600px">
         </div>
 
         <div v-show="cats" class="imagenesEditadas" id="cats">
-          <img src="../assets/media/img/cats.png" height="600px">
+          <img src="../assets/media/img/cats.png" alt="cats" height="600px">
         </div>
 
         <div v-show="flexible" class="imagenesEditadas" id="flexible">
-          <img src="../assets/media/img/videojuegos.png" height="600px">
+          <img src="../assets/media/img/videojuegos.png" alt="flexible" height="600px">
         </div>
 
         <div v-show="comunicacion" class="imagenesEditadas" id="comunicacion">
-          <img src="../assets/media/img/comunicacion.png" height="600px">
+          <img src="../assets/media/img/comunicacion.png" alt="comunicacion" height="600px">
         </div>
 
         <div class="imagenPrincipal">
-          <img alt="avatar logo" src="../assets/media/img/yo.png" height="600px">
+          <img src="../assets/media/img/yo.png" alt="imagenBase" height="600px">
         </div>
       </div>
 
@@ -73,24 +73,11 @@
         </div>
 
         <div class="flecha">
-          <img src="../assets/media/img/flecha2.png" width="300px">
+          <img src="../assets/media/img/flecha3.png" alt="flecha" width="300px">
         </div>
+    
+      </div>
     </div>
-    
-    
-
-    </div>
-    
-    
-     
-    <!-- <div v-show="hover2" class="subirTexto" id="bolita2">
-      <img src="../assets/corona.png">
-    </div>
-       
-    <div v-show="hover3" class="subirTexto" id="bolita3">
-      <img src="../assets/angelitas.png">
-    </div> -->
-
   </div>
 </template>
 
