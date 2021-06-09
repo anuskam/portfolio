@@ -64,11 +64,11 @@
           <p @mouseover="videogames=true" @mouseleave="videogames = false" class="btn bolita" id="videogames">Videojuegos</p>
           <p @mouseover="divertida=true" @mouseleave="divertida = false" class="btn bolita" id="divertida">Divertida</p>
           <p @mouseover="estudios=true" @mouseleave="estudios = false" class="btn bolita" id="estudios">Estudios</p>
-          <p @mouseover="analitica=true" @mouseleave="analitica = false" class="btn bolita" id="analitica">Analítica</p>
+          <!-- <p @mouseover="analitica=true" @mouseleave="analitica = false" class="btn bolita" id="analitica">Analítica</p> -->
           <p @mouseover="helpful=true" @mouseleave="helpful = false" class="btn bolita" id="helpful">Helpful</p>
           <p @mouseover="boardgames=true" @mouseleave="boardgames = false" class="btn bolita" id="boardgames">Juegos de mesa</p>
           <p @mouseover="cats=true" @mouseleave="cats = false" class="btn bolita" id="cats">Gatos</p>
-          <p @mouseover="flexible=true" @mouseleave="flexible = false" class="btn bolita" id="flexible">Flexible</p>
+          <!-- <p @mouseover="flexible=true" @mouseleave="flexible = false" class="btn bolita" id="flexible">Flexible</p> -->
           <p @mouseover="comunicacion=true" @mouseleave="comunicacion = false" class="btn bolita" id="comunicacion">Comunicación</p>
         </div>
 

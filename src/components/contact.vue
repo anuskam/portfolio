@@ -9,9 +9,10 @@
       <div class="contact-text">
         <p>Si quieres contactar conmigo para saber más de mis trabajos, hacer alguna sugerencia
         o hablar, puedes encontrarme en las siguientes redes sociales.</p>
-
+        <br>
+        <p>También puedes descargarte mi curriculum en el siguiente enlace:</p>
         <!-- LÍNEA PARA DESCARGAR EL CURRICULUM EN CASO DE QUE ALGÚN DÍA LO HAGA -->
-        <!-- <p><a class="btn btn-primary cv" download href="doc/doc.pdf">CV</a></p> -->
+        <p><a class="btn btn-primary cv" download href="cv/cv.pdf">Curriculum</a></p>
       </div>
 
       <div class="socialmedia">
@@ -142,6 +143,7 @@ h1{
   /* padding: 5px 25px; */
   display: flex;
   align-content: center;
+  justify-content: space-around;
 }
 
 @media (max-width: 1024px){
