@@ -12,7 +12,7 @@
         <br>
         <p>También puedes descargarte mi curriculum en el siguiente enlace:</p>
         <!-- LÍNEA PARA DESCARGAR EL CURRICULUM EN CASO DE QUE ALGÚN DÍA LO HAGA -->
-        <p><a class="btn btn-primary cv" download href="cv/cv.pdf">Curriculum</a></p>
+        <p><a class="btn btnContact cv" download href="cv/Curriculum_Anna_Moreta.pdf">Curriculum</a></p>
       </div>
 
       <div class="socialmedia">
@@ -177,6 +177,11 @@ h1{
     margin-bottom: 10%;
   }
 
+}
+
+.btnContact {
+  background-color: #D9A129;
+  color: white;
 }
 
 
